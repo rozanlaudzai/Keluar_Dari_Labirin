@@ -20,9 +20,9 @@ char arr[batas][batas] = {
 
 void print() {
   printf("\n");
-  for(short i = 0; i < batas; ++i) {
-    for(short j = 0; j < batas; ++j) {
-      if(i == y && j == x)
+  for (short i = 0; i < batas; ++i) {
+    for (short j = 0; j < batas; ++j) {
+      if (i == y && j == x)
         printf(" ");
       else
         printf("%c ", arr[i][j]);
@@ -46,7 +46,7 @@ int main() {
 
   print();
 
-  while(1) {
+  while (true) {
     char a = getch();
     if(a == 'w')
       --y;
@@ -60,15 +60,15 @@ int main() {
       ++y;
     system("cls");
     print();
-    if(arr[y][x] == '#') {
+    if (arr[y][x] == '#') {
       menang = 1;
       break;
     }
-    if(arr[y][x] == '&')
+    if (arr[y][x] == '&')
       break;
   }
 
-  if(menang)
+  if (menang)
     printf("\n\nSELAMAT KAMU MENANG!!!!\n\n\n");
   else
     printf("\n\nYAAHHH KAMU KALAH :(\n\n\n");
