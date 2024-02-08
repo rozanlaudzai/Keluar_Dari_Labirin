@@ -48,18 +48,20 @@ int main() {
 
   while (true) {
     char a = getch();
-    if(a == 'w')
+    if (a == 'w')
       --y;
-    else if(a == 's')
+    else if (a == 's')
       ++y;
-    else if(a == 'a')
+    else if (a == 'a')
       --x;
-    else if(a == 'd')
+    else if (a == 'd')
       ++x;
-    if(y < 0)
+    
+    if (y < 0)
       ++y;
     system("cls");
     print();
+    
     if (arr[y][x] == '#') {
       menang = 1;
       break;
